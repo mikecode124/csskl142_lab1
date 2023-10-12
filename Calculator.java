@@ -15,14 +15,13 @@ import java.util.Scanner;
  */
 public class Calculator {
     public static void main(String[] args) {
-        String input = "4 + 4";
-        //String input = "4 + 4 / 2";
-        //String input = "1 * -3";
-//String input = "1 * -3 + 6 / 3";
+        report("4 + 4");
+        report("4 + 4 / 2");
+        report("1 * -3");
+        report("1 * -3 + 6 / 3");
 //String input = "5";
 //String input = "-5";
-        int answer = calculate(input);
-        System.out.println("Answer is " + answer);
+
     }
 
     // preconditions: all binary operations are separated via a space
@@ -64,9 +63,14 @@ public class Calculator {
                 }
             }
         }
-        // I honestly got a lot of help on this one. Very challenging yet fun to build.
+        // Very challenging yet fun to build.
         return total;
     }
 
+    public static void report(String input) {
 
+        System.out.println("For the input string: " + "\"" + input + "\"");
+
+        System.out.println("The answer is " + calculate(input) + "\n");
+    }
 }
